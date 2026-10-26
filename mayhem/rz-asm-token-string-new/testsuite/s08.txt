@@ -1,0 +1,1 @@
+movzx eax, byte [ecx + edx*2 - 4]

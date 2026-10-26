@@ -1,0 +1,1 @@
+mov rax, qword [rbp - 0x8]

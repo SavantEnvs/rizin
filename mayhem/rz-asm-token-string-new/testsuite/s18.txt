@@ -1,0 +1,1 @@
+fld tword [esp + 8]

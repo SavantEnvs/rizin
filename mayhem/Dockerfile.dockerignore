@@ -1,0 +1,8 @@
+# Effective .dockerignore for mayhem/Dockerfile (BuildKit prefers <dockerfile>.dockerignore over the
+# context-root .dockerignore). Upstream's root .dockerignore drops .git, which the commit image needs
+# (full history under /mayhem), so this file replaces it for this build only.
+build*/
+**/__pycache__/
+.DS_Store
+*.swp
+*~

@@ -1,0 +1,12 @@
+project: savantenvs/rizin
+target: rizin
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/rizin/testsuite
+
+cmds:
+  - cmd: /mayhem/build-install-asan/bin/rizin -N -q -e scr.color=0 -e bin.relocs.apply=true -c "iI;iS;is;ii;iE;ie;iz;ir;il;iM;iR;id" @@
+    timeout: 20
+    env:
+      LD_LIBRARY_PATH: /mayhem/build-install-asan/lib/x86_64-linux-gnu:/mayhem/build-install-asan/lib
