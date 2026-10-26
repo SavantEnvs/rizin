@@ -1,0 +1,10 @@
+project: savantenvs/rizin
+target: rz-asm-disasm
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/rz-asm-disasm/testsuite
+
+cmds:
+  - cmd: /mayhem/fuzz_rz_asm_disasm
+    libfuzzer: true
